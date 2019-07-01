@@ -1,21 +1,46 @@
 import React from 'react';
 import './App.css';
-import posts from './api/posts';
-import users from './api/users';
-import components from './api/comments';
 import PostsList from './components/postList/PostsList'
+
+const getPosts = () => {
+  return fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+};
+
+const getUsers = () => {
+  return fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+}
+
+const getComments = () => {
+  return fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(res => res.json())
+}
 
 class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      postsWithUser: []
+      postsWithUser: [],
+      showList: false,
+    };
+    this.startList = (event) => {
+      
+      this.setState({
+        showList: true,
+      })
     }
+
   }
 
-componentDidMount(){
+async componentDidMount(){
+  const posts = await getPosts();
+  const users = await getUsers();
+  const comments = await getComments();
+  const initArray = this.getPostsWidthUser(posts, users, comments)
   this.setState({
-    postsWithUser: this.getPostsWidthUser(posts, users, components)
+    postsWithUser: initArray,
+    
   })
 }
 
@@ -38,8 +63,14 @@ getPostsWidthUser(posts, users, comments){
     return (
       <div className="App">
         <h1>List of posts</h1>
-        <PostsList posts={this.state.postsWithUser} />
-      </div>
+          {!this.state.showList ? (
+            <button onClick={this.startList}>Load List</button>
+        ) : (
+            <PostsList posts={this.state.postsWithUser} />
+          )}
+        </div>
+      
+      
     );
   }
 
