@@ -1,0 +1,19 @@
+.commentBox{
+    box-shadow: 2px 2px 3px;
+    padding: 7px;
+    text-align: left;
+    transition: 3s;
+}
+
+.commentBox span{
+    font-weight: bold;
+}
+
+.commentBody{
+    margin-bottom: 5px;
+}
+
+.commentAutor{
+    font-size: 12px;
+    color: darkslategray;
+}
