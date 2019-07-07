@@ -10,16 +10,12 @@ class Post extends React.Component {
             shouComments: false
         }
 
-        this.checkComments = (event) => {
-            
+        this.checkComments = () => {
             this.setState((prevState) => ({
                 shouComments: !prevState.shouComments,
-                
             }))
         }
     }
-
-    
     
     render() {
         
@@ -37,12 +33,10 @@ class Post extends React.Component {
                     <CommentList className={stylePost.CommentListBox} comments={this.props.post.comments} />
                 ) : (
                     ''
-                )}
-                
+                )} 
             </li>
         )
     }
-    
 };
 
 export default Post
