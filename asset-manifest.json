@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/list_of_posts_dynamic/static/css/main.da2f452f.chunk.css",
-    "main.js": "/list_of_posts_dynamic/static/js/main.543b9619.chunk.js",
-    "main.js.map": "/list_of_posts_dynamic/static/js/main.543b9619.chunk.js.map",
+    "main.css": "/list_of_posts_dynamic/static/css/main.9aa09046.chunk.css",
+    "main.js": "/list_of_posts_dynamic/static/js/main.0f6ddbbe.chunk.js",
+    "main.js.map": "/list_of_posts_dynamic/static/js/main.0f6ddbbe.chunk.js.map",
     "runtime~main.js": "/list_of_posts_dynamic/static/js/runtime~main.6c615f28.js",
     "runtime~main.js.map": "/list_of_posts_dynamic/static/js/runtime~main.6c615f28.js.map",
-    "static/js/2.d4308b79.chunk.js": "/list_of_posts_dynamic/static/js/2.d4308b79.chunk.js",
-    "static/js/2.d4308b79.chunk.js.map": "/list_of_posts_dynamic/static/js/2.d4308b79.chunk.js.map",
+    "static/js/2.93a98f40.chunk.js": "/list_of_posts_dynamic/static/js/2.93a98f40.chunk.js",
+    "static/js/2.93a98f40.chunk.js.map": "/list_of_posts_dynamic/static/js/2.93a98f40.chunk.js.map",
     "index.html": "/list_of_posts_dynamic/index.html",
-    "precache-manifest.f8d18bc0d8d617270c76e6954bc0f856.js": "/list_of_posts_dynamic/precache-manifest.f8d18bc0d8d617270c76e6954bc0f856.js",
+    "precache-manifest.9827fc374f16acbddd1b18c8ab9c94a9.js": "/list_of_posts_dynamic/precache-manifest.9827fc374f16acbddd1b18c8ab9c94a9.js",
     "service-worker.js": "/list_of_posts_dynamic/service-worker.js",
-    "static/css/main.da2f452f.chunk.css.map": "/list_of_posts_dynamic/static/css/main.da2f452f.chunk.css.map"
+    "static/css/main.9aa09046.chunk.css.map": "/list_of_posts_dynamic/static/css/main.9aa09046.chunk.css.map"
   }
 }
