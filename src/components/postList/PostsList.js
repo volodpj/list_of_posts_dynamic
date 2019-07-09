@@ -10,6 +10,12 @@ class PostsList extends React.Component{
         };
     }
 
+    componentDidMount(){
+        this.setState({
+            filterPosts: this.props.posts
+        })
+    }
+
     giveFindText = (event) => {
         const text = event.target.value.toLowerCase();
         const filtersPost = this.props.posts.filter((post) => {
@@ -27,11 +33,7 @@ class PostsList extends React.Component{
                     onChange={this.giveFindText}
                 ></input> 
                 <ul>
-                    {this.state.filterPosts.length === 0 ? 
-                    this.props.posts.map((post) => {
-                        return <Post key={post.id} post={post}/>
-                    }) : 
-                    this.state.filterPosts.map((post) => {
+                    {this.state.filterPosts.map((post) => {
                         return <Post key={post.id} post={post}/>
                     })}
                 </ul>
