@@ -66,9 +66,9 @@ getPostsWidthUser(posts, users, comments){
         <h1>List of posts</h1>
           {!this.state.showList ? (
             <button onClick={this.startList}>Load List</button>
-        ) : (this.state.isLoad ? (
+          ) : (this.state.isLoad ? (
             <PostsList posts={this.state.postsWithUser} />
-          ) : (
+            ) : (
             <div>Loadin...</div>
           ))}
       </div>
