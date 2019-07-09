@@ -23,12 +23,13 @@ class App extends React.Component {
     this.state = {
       postsWithUser: [],
       showList: false,
+      isLoad: false,
     };
-    this.startList = (event) => {
-      
-      this.setState({
-        showList: true,
-      })
+
+    this.startList = () => {
+      this.setState((prevState) => ({
+        showList: !prevState.showList,
+      }))
     }
 
   }
@@ -40,7 +41,7 @@ async componentDidMount(){
   const initArray = this.getPostsWidthUser(posts, users, comments)
   this.setState({
     postsWithUser: initArray,
-    
+    isLoad: true,
   })
 }
 
@@ -65,15 +66,14 @@ getPostsWidthUser(posts, users, comments){
         <h1>List of posts</h1>
           {!this.state.showList ? (
             <button onClick={this.startList}>Load List</button>
-        ) : (
+        ) : (this.state.isLoad ? (
             <PostsList posts={this.state.postsWithUser} />
-          )}
-        </div>
-      
-      
+          ) : (
+            <div>Loadin...</div>
+          ))}
+      </div>
     );
   }
-
 }
 
 export default App;
